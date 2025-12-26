@@ -95,13 +95,13 @@ with st.sidebar:
         if st.button(faq["label"], use_container_width=True):
             st.session_state.faq_query = faq["query"]
             st.rerun()
-            
+
     st.markdown("---")
-    with st.expander("ℹ️ Project Owner"):
-        st.write("""
+    st.header("ℹ️ Project Owner")
+    st.markdown("""
         Design & development by: 
-        **Abdul Bari, AI Engineer** 
-        as part of AI for good initiatives.        
+        **Abdul Bari,  AI Engineer**  
+        as an AI for good initiative.        
         Please drop iquiries or feedback to:  
         bari.a.au@gmail.com
         """)
