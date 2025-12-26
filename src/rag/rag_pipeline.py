@@ -93,6 +93,11 @@ class RAGPipeline:
         template = """Start an answer with a thanking note, such as Thanks for asking 
         or in a similar manner. An answer should be based only on the following context:
         {context}
+        The answer should be concise and to the point.Always try to refer the relevant 
+        section(s) of the Act in the answer in case of main act. If the answer is related
+        to schedule 1 provide references to relevant principle number(s) and for other 
+        schedules provide references to relevant clause(s).
+        
         However, avoid using disclaimer or similar phrases, such as based on the given 
         document or retrieved context or similar phrases. Again, if no context is 
         available, acknowledge that humbly. Do not attempt to answer without context. 
