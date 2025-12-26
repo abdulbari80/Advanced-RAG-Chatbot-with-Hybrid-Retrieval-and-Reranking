@@ -102,7 +102,7 @@ with st.sidebar:
         Design & development by: 
         **Abdul Bari,  AI Engineer**  
         as an AI for good initiative.        
-        Please drop iquiries or feedback to:  
+        Drop inquiry/ feedback to:  
         bari.a.au@gmail.com
         """)
 
