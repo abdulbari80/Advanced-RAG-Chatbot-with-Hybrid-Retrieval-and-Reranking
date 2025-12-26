@@ -97,14 +97,27 @@ with st.sidebar:
             st.rerun()
 
     st.markdown("---")
-    st.header("ℹ️ Design & Development")
-    st.markdown(""" 
-        **Abdul Bari,  AI Engineer**  
-        as an AI for good initiative.        
-        Drop inquiry/ feedback to:  
-        bari.a.au@gmail.com
-        """)
-
+    st.subheader("ⓘ   Developer Profile")
+    st.markdown("""
+        **Abdul Bari**
+        <p style="font-size: 0.85rem; color: #888; margin-top: -10px;">
+            AI Engineering • Data Science • MLOps
+            Promoter of responsible AI for good
+        </p>
+        <div style="display: flex; gap: 20px; align-items: center;">
+            <a href="https://github.com/abdulbari80" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30">
+            </a>
+            <a href="https://linkedin.com/in/abdul-bari-data-scientist/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="30">
+            </a>
+            <a href="mailto:bari.a.au@gmail.com">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="30">
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 # --- Main Chat UI ---
 st.title("Privacy Law Chatbot✨")
 st.caption("AI-Powered Advisory for the Australian Privacy Act 1988")
