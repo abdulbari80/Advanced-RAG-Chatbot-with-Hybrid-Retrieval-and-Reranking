@@ -97,9 +97,8 @@ with st.sidebar:
             st.rerun()
 
     st.markdown("---")
-    st.header("ℹ️ Project Owner")
-    st.markdown("""
-        Design & development by: 
+    st.header("ℹ️ Design & Development")
+    st.markdown(""" 
         **Abdul Bari,  AI Engineer**  
         as an AI for good initiative.        
         Drop inquiry/ feedback to:  
