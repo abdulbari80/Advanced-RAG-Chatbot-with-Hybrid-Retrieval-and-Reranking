@@ -99,10 +99,11 @@ with st.sidebar:
     st.markdown("---")
     st.subheader("ⓘ   Developer Profile")
     st.markdown("""
-        **Abdul Bari, Data Scientist**
+        **Abdul Bari**
         <p style="font-size: 0.85rem; color: #888; margin-top: -10px;">
             AI Engineering • Data Science • MLOps
             Promoter of responsible AI for good
+            Email: bari.a.au@gmail.com
         </p>
         <div style="display: flex; gap: 20px; align-items: center;">
             <a href="https://github.com/abdulbari80" target="_blank">
@@ -111,8 +112,8 @@ with st.sidebar:
             <a href="https://linkedin.com/in/abdul-bari-data-scientist/" target="_blank">
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="30">
             </a>
-            <a href="javascript:void(0)" onclick="window.location.href='mailto:bari.a.au@gmail.com';">
-                <img src="https://cdn-icons-png.flaticon.com/512/646/646069.png" width="30" style="cursor:pointer;">
+            <a href="mailto:bari.a.au@gmail.com" target="_self">
+                <img src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png" width="30">
             </a>
         </div>
         """,
