@@ -1,5 +1,22 @@
 # Privacy Act 1988: High-Precision RAG Advisory System
+<pre>
+graph TD
+    %% Define Nodes
+    User([User Query]) --&gt; Rewriter[Query Rewriter]
+    Rewriter --&gt; Search{Hybrid Search}
+    
+    subgraph VectorDB [Vector Database]
+        Docs[(Knowledge Base)]
+    end
+    
+    Search --&gt; Docs
+    Docs --&gt; Reranker[Cross-Encoder Reranker]
+    Reranker --&gt; LLM[LLM / Generator]
+    LLM --&gt; Response([Final Answer + Citations])
 
+    %% Styling
+    style VectorDB fill:#f9f,stroke:#333,stroke-width:2px
+</pre>
 An enterprise-grade Retrieval-Augmented Generation (RAG) system specialized in the **Australian Privacy Act 1988**. This system utilizes a **Two-Stage Retrieval** architecture (Bi-Encoder + Cross-Encoder) to provide cited, grounded, and legally-aligned advisory responses.
 
 ## 🎯 Engineering Philosophy
