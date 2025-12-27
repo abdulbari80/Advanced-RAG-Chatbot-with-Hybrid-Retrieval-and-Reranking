@@ -1,21 +1,30 @@
 # Privacy Act 1988: High-Precision RAG Advisory System
 ```mermaid
 graph TD
-    %% Define Nodes
-    User([User Query]) --&gt; Rewriter[Query Rewriter]
-    Rewriter --&gt; Search{Hybrid Search}
-    
-    subgraph VectorDB [Vector Database]
-        Docs[(Knowledge Base)]
+    %% Define the Ingestion Flow
+    subgraph Ingestion_Pipeline [Ingestion Pipeline]
+        Docs[Raw Documents] --> Chunking[Semantic Chunking]
+        Chunking --> Embed[Embedding Model]
+        Embed --> VDB[(Vector Database)]
     end
-    
-    Search --&gt; Docs
-    Docs --&gt; Reranker[Cross-Encoder Reranker]
-    Reranker --&gt; LLM[LLM / Generator]
-    LLM --&gt; Response([Final Answer + Citations])
 
-    %% Styling
-    style VectorDB fill:#f9f,stroke:#333,stroke-width:2px
+    %% Define the Retrieval Flow
+    User([User Query]) --> Rewrite[Query Expansion / Rewriting]
+    Rewrite --> Retrieval{Hybrid Search}
+    
+    VDB <--> Retrieval
+    
+    Retrieval --> Rerank[Cross-Encoder Reranker]
+    Rerank --> Context[Top-K Refined Context]
+    
+    %% Define the Generation Flow
+    Context --> LLM[LLM Generator]
+    LLM --> Out([Final Response + Citations])
+
+    %% Professional Styling
+    style VDB fill:#f9f,stroke:#333,stroke-width:2px
+    style Retrieval fill:#fff4dd,stroke:#d4a017,stroke-width:2px
+    style LLM fill:#e1f5fe,stroke:#01579b,stroke-width:2px
 ```
 An enterprise-grade Retrieval-Augmented Generation (RAG) system specialized in the **Australian Privacy Act 1988**. This system utilizes a **Two-Stage Retrieval** architecture (Bi-Encoder + Cross-Encoder) to provide cited, grounded, and legally-aligned advisory responses.
 
