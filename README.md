@@ -22,7 +22,7 @@ graph TD
     LLM --> Out([Final Response + Citations])
 
     %% Professional Styling
-    style stroke:#333,stroke-width:2px
+    style VDB fill:#f9f,stroke:#333,stroke-width:2px
     style Retrieval fill:#fff4dd,stroke:#d4a017,stroke-width:2px
     style LLM fill:#e1f5fe,stroke:#01579b,stroke-width:2px
 ```
