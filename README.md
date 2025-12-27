@@ -1,5 +1,5 @@
 # Privacy Act 1988: High-Precision RAG Advisory System
-```
+```mermaid
 graph TD
     %% Define Nodes
     User([User Query]) --&gt; Rewriter[Query Rewriter]
